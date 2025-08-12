@@ -1,0 +1,102 @@
+/* Base Styles (Desktop first) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* Ensure images never overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* General container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Newsletter input fix */
+input {
+  background-color: #192537;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #fff; /* underline style */
+  margin-bottom: 10px;
+}
+
+/* Button adjustments */
+button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===========================
+   RESPONSIVE BREAKPOINTS
+   =========================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  header, nav, footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  /* Stack everything vertically */
+  .row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Text center for mobile */
+  h1, h2, h3, p {
+    text-align: center;
+  }
+
+  /* Adjust padding and font sizes */
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer {
+    padding: 20px;
+    text-align: center;
+  }
+}
