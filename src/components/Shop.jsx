@@ -37,6 +37,11 @@ const Title = styled.h2`
   font-weight: bold;
   color: #192537;
   margin-bottom: 40px;
+
+	@media (max-width: 768px) {
+		font-size: 1.4rem;
+		margin-bottom: 24px;
+	}
 `;
 
 const Grid = styled.div`
@@ -45,6 +50,12 @@ const Grid = styled.div`
   gap: 20px;
   max-width: 1000px;
   margin: 0 auto;
+
+	@media (max-width: 768px) {
+		gap: 14px;
+		grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+		max-width: 560px;
+	}
 `;
 
 const ShapeCard = styled.div`
@@ -57,11 +68,20 @@ const ShapeImage = styled.img`
   width: 80px;
   height: auto;
   margin-bottom: 10px;
+
+	@media (max-width: 768px) {
+		width: 60px;
+		margin-bottom: 8px;
+	}
 `;
 
 const ShapeName = styled.p`
   font-size: 1rem;
   color: #192537;
+
+	@media (max-width: 768px) {
+		font-size: 0.9rem;
+	}
 `;
 
 export default function Shop() {

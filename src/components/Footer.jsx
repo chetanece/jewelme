@@ -22,6 +22,17 @@ const TopSection = styled.div`
   gap: 50px;
   justify-content: space-between;
   padding: 40px;
+
+	@media (max-width: 1024px) {
+		gap: 30px;
+		padding: 30px 24px;
+	}
+
+	@media (max-width: 768px) {
+		gap: 20px;
+		padding: 24px 16px;
+		justify-content: center;
+	}
 `;
 
 const Column = styled.div`
@@ -48,6 +59,11 @@ const Column = styled.div`
       }
     }
   }
+
+	@media (max-width: 768px) {
+		min-width: 220px;
+		text-align: left;
+	}
 `;
 
 const Newsletter = styled.div`
@@ -75,6 +91,10 @@ const Newsletter = styled.div`
     font-size: 0.8rem;
     margin-bottom: 15px;
   }
+
+	@media (max-width: 768px) {
+		max-width: 100%;
+	}
 `;
 
 const SocialIcons = styled.div`
@@ -90,6 +110,10 @@ const SocialIcons = styled.div`
       color: #ccc;
     }
   }
+
+	@media (max-width: 768px) {
+		justify-content: center;
+	}
 `;
 
 const BottomBar = styled.div`
@@ -100,6 +124,16 @@ const BottomBar = styled.div`
   padding: 15px 40px;
   flex-wrap: wrap;
   font-size: 0.8rem;
+
+	@media (max-width: 1024px) {
+		padding: 12px 24px;
+	}
+
+	@media (max-width: 768px) {
+		gap: 12px;
+		flex-direction: column;
+		text-align: center;
+	}
 `;
 
 const WhiteBottomBar = styled.div`
@@ -116,6 +150,11 @@ const PaymentIcons = styled.div`
     height: 25px;
     object-fit: contain;
   }
+
+	@media (max-width: 768px) {
+		gap: 10px;
+		img { height: 22px; }
+	}
 `;
 
 export default function Footer() {

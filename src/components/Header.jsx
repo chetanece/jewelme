@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import {
   FiBell,
@@ -30,6 +31,16 @@ const TopBanner = styled.div`
   top: 0;
   left: 0;
   z-index: 1000;
+
+	@media (max-width: 768px) {
+		font-size: 14px;
+		padding: 8px;
+	}
+
+	@media (max-width: 480px) {
+		font-size: 12px;
+		padding: 6px;
+	}
 `;
 
 const Heading = styled.div`
@@ -40,6 +51,20 @@ const Heading = styled.div`
   margin-top: 60px; /* space below banner */
   padding: 10px 0;
   border-bottom: 1px solid #ddd;
+	flex-wrap: wrap;
+
+	@media (max-width: 1024px) {
+		margin-top: 30px;
+	}
+
+	@media (max-width: 768px) {
+		width: 95%;
+		margin-top: 20px;
+		padding: 6px 0;
+		border-bottom: none;
+		justify-content: center;
+		gap: 12px;
+	}
 `;
 
 const SideIcons = styled.div`
@@ -58,6 +83,11 @@ const SideIcons = styled.div`
       color: #a3834c;
     }
   }
+    
+    @media (max-width: 768px) {
+        gap: 12px;
+        font-size: 1.2rem;
+    }
 `;
 
 const LogoWrapper = styled.div`
@@ -80,6 +110,19 @@ const LogoWrapper = styled.div`
     letter-spacing: 2px;
     color: #a3834c;
   }
+
+	@media (max-width: 768px) {
+		gap: 4px;
+
+		 h1 {
+			font-size: 22px;
+		}
+
+		 span {
+			font-size: 10px;
+			letter-spacing: 1.5px;
+		}
+	}
 `;
 
 const BellWrapper = styled.div`
@@ -106,7 +149,38 @@ const NavBar = styled.nav`
   font-size: 14px;
   font-weight: 500;
   padding: 10px 0;
+
+	@media (max-width: 1024px) {
+		gap: 20px;
+	}
+
+    @media (max-width: 768px) {
+		gap: 10px 16px;
+		font-size: 12px;
+		width: 100%;
+		justify-content: center;
+		flex-wrap: wrap;
+		row-gap: 8px;
+		padding: 8px 12px;
+		white-space: normal;
+    }
+
+    @media (max-width: 480px) {
+        gap: 10px;
+        span { padding-right: 16px; }
+    }
 `;
+
+
+const navItems = [
+	"RINGS",
+	"EARINGS",
+	"PENDANTS",
+	"NECKLACES",
+	"BANGLES",
+	"SOLITAIRES",
+	"MY JEWEL PLAN",
+];
 
 export default function Header() {
   return (
@@ -116,7 +190,7 @@ export default function Header() {
       </TopBanner>
 
       <Heading>
-        {/* Left Icons */}
+				{/* Left Icons */}
         <SideIcons>
           <FiHeadphones />
           <FiCalendar />
@@ -142,15 +216,11 @@ export default function Header() {
         </SideIcons>
       </Heading>
 
-      <NavBar>
-        <span>RINGS</span>
-        <span>EARINGS</span>
-        <span>PENDANTS</span>
-        <span>NECKLACES</span>
-        <span>BANGLES</span>
-        <span>SOLITAIRES</span>
-        <span>MY JEWEL PLAN</span>
-      </NavBar>
+			<NavBar>
+				{navItems.map((item) => (
+					<span key={item}>{item}</span>
+				))}
+			</NavBar>
     </HeaderWrapper>
   );
 }

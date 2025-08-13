@@ -11,6 +11,15 @@ const Section = styled.section`
   border: 2.5px solid #192537;
   gap: 40px;
   flex-wrap: wrap;
+
+	@media (max-width: 1024px) {
+		padding: 40px 24px;
+	}
+
+	@media (max-width: 768px) {
+		padding: 28px 16px;
+		gap: 24px;
+	}
 `;
 
 const ImageArea = styled.div`
@@ -26,12 +35,21 @@ const ImageArea = styled.div`
     max-height: 100%;
     object-fit: contain;
   }
+
+	@media (max-width: 768px) {
+		height: 280px;
+		min-width: 260px;
+	}
 `;
 
 const Content = styled.div`
   flex: 1;
   min-width: 300px;
   max-width: 500px;
+
+	@media (max-width: 768px) {
+		min-width: 260px;
+	}
 `;
 
 const Title = styled.h2`
@@ -39,6 +57,10 @@ const Title = styled.h2`
   font-weight: bold;
   color: #192537;
   margin-bottom: 15px;
+
+	@media (max-width: 768px) {
+		font-size: 1.5rem;
+	}
 `;
 
 const Description = styled.p`
@@ -46,6 +68,10 @@ const Description = styled.p`
   color: #555;
   line-height: 1.6;
   margin-bottom: 20px;
+
+	@media (max-width: 768px) {
+		font-size: 0.9rem;
+	}
 `;
 
 const LinkText = styled.a`
@@ -60,6 +86,10 @@ const LinkText = styled.a`
   &:hover {
     text-decoration: underline;
   }
+
+	@media (max-width: 768px) {
+		font-size: 0.85rem;
+	}
 `;
 
 const SubHeading = styled.p`
@@ -67,12 +97,20 @@ const SubHeading = styled.p`
   font-weight: 500;
   color: #333;
   margin: 20px 0 15px;
+
+	@media (max-width: 768px) {
+		font-size: 0.85rem;
+	}
 `;
 
 const ButtonGroup = styled.div`
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
+
+	@media (max-width: 768px) {
+		gap: 10px;
+	}
 `;
 
 const Button = styled.button`
@@ -88,6 +126,11 @@ const Button = styled.button`
     background: ${(props) => (props.primary ? "#0f1823" : "#192537")};
     color: #fff;
   }
+
+	@media (max-width: 768px) {
+		font-size: 0.85rem;
+		padding: 9px 16px;
+	}
 `;
 
 export default function MyJewelPlan() {

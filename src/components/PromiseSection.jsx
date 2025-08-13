@@ -10,6 +10,10 @@ const PromiseWrapper = styled.section`
   padding: 40px;
   text-align: center;
   background: #f9f9f9;
+
+	@media (max-width: 768px) {
+		padding: 28px 16px;
+	}
 `;
 
 const Title = styled.h3`
@@ -17,6 +21,11 @@ const Title = styled.h3`
   margin-bottom: 30px;
   font-family: "Playfair Display", serif;
   color: #192537;
+
+	@media (max-width: 768px) {
+		font-size: 1.25rem;
+		margin-bottom: 20px;
+	}
 `;
 
 const Grid = styled.div`
@@ -24,6 +33,10 @@ const Grid = styled.div`
   justify-content: center;
   gap: 50px;
   flex-wrap: wrap;
+
+	@media (max-width: 768px) {
+		gap: 20px;
+	}
 `;
 
 const Card = styled.div`
@@ -48,6 +61,14 @@ const Card = styled.div`
     color: #555;
     line-height: 1.4;
   }
+
+	@media (max-width: 768px) {
+		max-width: 160px;
+
+		 svg { font-size: 1.6rem; }
+		 h4 { font-size: 0.95rem; }
+		 p { font-size: 0.8rem; }
+	}
 `;
 
 export default function PromiseSection() {

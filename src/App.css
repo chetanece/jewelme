@@ -12,6 +12,17 @@ body {
   line-height: 1.5;
 }
 
+/* Prevent stray horizontal scroll from any child overflow */
+html, body, #root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+header, nav, main, section, footer {
+  max-width: 100%;
+}
+
 /* Ensure images never overflow */
 img {
   max-width: 100%;
